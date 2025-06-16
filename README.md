@@ -2,15 +2,7 @@
 
 https://github.com/MountainKing1/MountainKing1.github.io/
 
-<!DOCTYPE html>Add commentMore actions
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Button Example</title>
-</head>
-<body>
-    <button id="helloButton">Click Me</button>
+<!DOCTYPE html>
 <html> 
   <head>
     <title>Processing.JS inside Webpages: Template</title> 
@@ -41,16 +33,10 @@ https://github.com/MountainKing1/MountainKing1.github.io/
       ellipse(153, 200, 10, 10);
     }};
 
-    <script>
-        document.getElementById('helloButton').addEventListener('click', function() {
-            alert('Hello!');
-        });
-    </script>
-</body>
-</html>
   // Get the canvas that ProcessingJS will use
   var canvas = document.getElementById("mycanvas"); 
   // Pass the function to ProcessingJS constructor
   var processingInstance = new Processing(canvas, programCode); 
   </script>
 </html>
+

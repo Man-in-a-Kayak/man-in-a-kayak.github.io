@@ -1,42 +1,140 @@
-# MountainKing1.github.io
+MountainKing1.github.io
 
 https://github.com/MountainKing1/MountainKing1.github.io/
 
 <!DOCTYPE html>
-<html> 
+
+<html>
+
   <head>
-    <title>Processing.JS inside Webpages: Template</title> 
+        <meta charset="utf-8">
+        <title>New Webpage</title>
   </head>
+
   <body>
-	<!--This draws the canvas on the webpage -->
-    <canvas id="mycanvas"></canvas> 
+
+  <h1>Galcon 2 Fan Page</h1>
+  <br>
+  <p>Hi there! Hello!
+  <br>
+  Have you ever wanted to conquer the galaxy? Prove that your the best lalaalallaala
+  <br>
+  Well boy do I have the game for you!</p>
   </body>
- 
-  <!-- Include the processing.js library -->
-  <!-- See https://khanacademy.zendesk.com/hc/en-us/articles/202260404-What-parts-of-ProcessingJS-does-Khan-Academy-support- for differences -->
-  <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js"></script> 
-  <script>
+  <canvas id="mycanvas" width="400" height="400"></canvas> 
+  <script src="https://cdn.jsdelivr.net/processing.js/1.4.8/processing.min.js">
+  </script> 
+<script>
   var programCode = function(processingInstance) {
     with (processingInstance) {
       size(400, 400); 
       frameRate(30);
-        
-      // Paste code from Khan Academy here:
-      fill(255, 255, 0);
-      ellipse(200, 200, 200, 200);
-      noFill();
-      stroke(0, 0, 0);
-      strokeWeight(2);
-      arc(200, 200, 150, 100, 0, PI);
-      fill(0, 0, 0);
-      ellipse(250, 200, 10, 10);
-      ellipse(153, 200, 10, 10);
-    }};
-
-  // Get the canvas that ProcessingJS will use
+    //Code under here
+//Variable
+var x = 1;
+//DRAW FUNCTION
+draw = function() {
+//DRAW FUNCTION
+//Background
+    //Blue Sky
+    background(151, 244, 247);
+    //Tan Dirt
+    noStroke();
+    fill(255, 233, 178);
+    rect(0, 225, 400, 175);
+//Shadow
+    //Quad 1
+    strokeWeight(1.0);
+    stroke(64, 58, 45);
+    fill(64, 58, 45);
+    quad
+        (175, 300,
+        175+(cos(x))*150, 300+(sin(x))*75,
+        225+(cos(x))*150,300+(sin(x))*50,
+        225, 300);
+    //Quad 2
+    strokeWeight(1.0);
+    stroke(64, 58, 45);
+    fill(64, 58, 45);
+    quad
+        (125, 300,
+        125+(cos(x))*150, 300+(sin(x))*50,
+        175+(cos(x))*150,300+(sin(x))*75,
+        175, 300);
+    //Quad 3
+    strokeWeight(1.0);
+    stroke(64, 58, 45);
+    fill(64, 58, 45);
+    quad(175, 325,
+        175+(cos(x))*150, 325+(sin(x))*50,
+        225+(cos(x))*150,300+(sin(x))*50,
+        225, 300);
+    //Quad 4
+    strokeWeight(1.0);
+    stroke(64, 58, 45);
+    fill(64, 58, 45);
+    quad(125, 300,
+        125+(cos(x))*150, 300+(sin(x))*50,
+        175+(cos(x))*150,325+(sin(x))*50,
+        175, 325);
+    //Quad 5
+    strokeWeight(1.0);
+    stroke(64, 58, 45);
+    fill(64, 58, 45);
+    quad(175, 275,
+        175+(cos(x))*150, 275+(sin(x))*50,
+        225+(cos(x))*150,300+(sin(x))*50,
+        225, 300);
+    //Quad 6
+    strokeWeight(1.0);
+    stroke(64, 58, 45);
+    fill(64, 58, 45);
+    quad(125, 300,
+        125+(cos(x))*150, 300+(sin(x))*50,
+        175+(cos(x))*150,275+(sin(x))*50,
+        175, 275);
+//Object
+    //Left Bottom
+    noStroke();
+    fill(
+        (cos( x )*78)+128,
+        (cos( x )*78)+178,
+        (cos( x )*78)+128
+        );
+    quad(125, 300, 125, 125, 175, 150, 175, 325);
+    //Left Top
+    noStroke();
+    fill(
+        (cos( x+25 )*78)+138,
+        (cos( x+25 )*78)+188,
+        (cos( x+25 )*78)+138
+        );
+    triangle(125, 126, 175, 75, 175, 151);
+    //Right Bottom
+    noStroke();
+    fill(
+        (cos( x+20 )*78)+128,
+        (cos( x+20 )*78)+178,
+        (cos( x+20 )*78)+128
+        );
+    quad(175, 325, 175, 150, 225, 125, 225, 300);
+    //Right Top
+    noStroke();
+    fill(
+        (cos( x+20 )*78)+138,
+        (cos( x+20 )*78)+188,
+        (cos( x+20 )*78)+138
+        );
+    triangle(225, 126, 175, 75, 175, 151);
+//Speed Control
+//        >>   <<
+    x = x + 0.025;
+    noStroke();
+};
+    //Code end here
+    }
+  };
   var canvas = document.getElementById("mycanvas"); 
-  // Pass the function to ProcessingJS constructor
   var processingInstance = new Processing(canvas, programCode); 
   </script>
 </html>
-

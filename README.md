@@ -1,6 +1,6 @@
-MountainKing1.github.io
+man-in-a-kayak.github.io
 
-https://github.com/MountainKing1/MountainKing1.github.io/
+https://github.com/man-in-a-kayak/man-in-a-kayak.github.io/
 
 i hate debuging
 
